@@ -28,18 +28,30 @@ const Contact = () => {
 	const sendEmail = (e) => {
 		e.preventDefault();
 
+		// Reset both states before each submission
+		setError(false);
+		setSuccess(false);
+
 		emailjs
-			.sendForm("service_n919v6o", "template_s70g3ik", formRef.current, {
-				publicKey: "JXTYJ75sjdGeB2s1w",
-			})
+			.sendForm(
+				import.meta.env.VITE_EMAILJS_SERVICE_ID,
+				import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+				formRef.current,
+				{
+					publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+				}
+			)
 			.then(
 				() => {
 					setSuccess(true);
 					formRef.current.reset();
+					// Auto-hide success message after 5 seconds
+					setTimeout(() => setSuccess(false), 5000);
 				},
 				(error) => {
 					setError(true);
-					formRef.current.reset();
+					// Auto-hide error message after 5 seconds
+					setTimeout(() => setError(false), 5000);
 					console.log("FAILED...", error.text);
 				}
 			);
@@ -113,8 +125,16 @@ const Contact = () => {
 						name="message"
 					></textarea>
 					<button>Submit</button>
-					{success && <span>Success!</span>}
-					{error && <span>Something went wrong!</span>}
+					{success && (
+						<span style={{ color: "#2ecc71", fontWeight: "600" }}>
+							✓ Message sent successfully!
+						</span>
+					)}
+					{error && (
+						<span style={{ color: "#e74c3c", fontWeight: "600" }}>
+							✗ Something went wrong. Please try again.
+						</span>
+					)}
 				</motion.form>
 			</div>
 		</motion.div>

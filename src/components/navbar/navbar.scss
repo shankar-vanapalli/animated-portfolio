@@ -8,8 +8,18 @@
 		justify-content: space-between;
 		align-items: center;
 		height: 100%;
+		padding: 0 20px;
+
+		@media (max-width: 768px) {
+			justify-content: flex-end;
+		}
+
 		span {
 			font-weight: bold;
+
+			@media (max-width: 768px) {
+				display: none;
+			}
 		}
 
 		.social {

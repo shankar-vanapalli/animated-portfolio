@@ -1,5 +1,6 @@
 import "./hero.scss";
 import { motion } from "framer-motion";
+import Typewriter from "typewriter-effect";
 
 const textVariants = {
 	initial: {
@@ -38,15 +39,28 @@ const Hero = () => {
 						BHAVANI SHANKAR VANAPALLI
 					</motion.h2>
 					<motion.h1 variants={textVariants}>
-						<span>Frontend Developer</span>
+						<Typewriter
+							options={{
+								strings: [
+									"Frontend Developer",
+									"Full-Stack Engineer",
+									"React.js Specialist",
+									"UI/UX Enthusiast",
+								],
+								autoStart: true,
+								loop: true,
+								wrapperClassName: "typewriter-text",
+								cursorClassName: "typewriter-cursor",
+							}}
+						/>
 					</motion.h1>
 					<motion.div variants={textVariants} className="buttons">
-						<motion.button variants={textVariants}>
-							About Work
-						</motion.button>
-						<motion.button variants={textVariants}>
+						<motion.a href="#projects" variants={textVariants}>
+							See My Work
+						</motion.a>
+						<motion.a href="#contact" variants={textVariants}>
 							Contact Me
-						</motion.button>
+						</motion.a>
 					</motion.div>
 					<motion.img
 						src="/scroll.png"

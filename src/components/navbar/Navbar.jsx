@@ -15,14 +15,26 @@ const Navbar = () => {
 					Bhavani Shankar Vanapalli
 				</motion.span>
 				<div className="social">
-					<a href="#">
-						<img src="/facebook.png" />
+					<a
+						href="https://facebook.com"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<img src="/facebook.png" alt="Facebook" />
 					</a>
-					<a href="#">
-						<img src="/instagram.png" />
+					<a
+						href="https://instagram.com"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<img src="/instagram.png" alt="Instagram" />
 					</a>
-					<a href="#">
-						<img src="/youtube.png" />
+					<a
+						href="https://youtube.com"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<img src="/youtube.png" alt="YouTube" />
 					</a>
 				</div>
 			</div>
