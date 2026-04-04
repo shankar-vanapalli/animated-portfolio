@@ -17,18 +17,44 @@
 			justify-content: center;
 			gap: 40px;
 
+			@media (max-width: 768px) {
+				width: 100%;
+				align-items: center;
+				text-align: center;
+				padding: 0 20px;
+				gap: 20px;
+			}
+
 			h2 {
 				font-size: 30px;
 				color: rebeccapurple;
 				letter-spacing: 5px;
+
+				@media (max-width: 768px) {
+					font-size: 20px;
+					letter-spacing: 2px;
+				}
 			}
 
 			h1 {
 				font-size: 88px;
+
+				@media (max-width: 768px) {
+					font-size: 40px;
+				}
+
+				.typewriter-text {
+					color: #f39c12; // Orange to match the About question mark and buttons
+				}
+
+				.typewriter-cursor {
+					color: #fff; // Blinking cursor in white
+				}
 			}
 
 			.buttons {
-				button {
+				a {
+					display: inline-block;
 					padding: 20px;
 					border: 1px solid white;
 					background-color: transparent;
@@ -45,6 +71,7 @@
 			}
 		}
 	}
+
 	.imgContainer {
 		height: 100%;
 		position: absolute;
@@ -53,8 +80,27 @@
 		display: flex;
 		align-items: center;
 		margin-right: 20%;
+
+		@media (max-width: 768px) {
+			height: 50%;
+			top: auto;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+			justify-content: center;
+			opacity: 0.3;
+			z-index: 0;
+			pointer-events: none;
+		}
+
 		img {
 			border-radius: 50%;
+
+			@media (max-width: 768px) {
+				width: 80%;
+				height: auto;
+			}
 		}
 	}
 }

@@ -5,10 +5,10 @@ const About = () => {
 	const skills = [
 		"React.js",
 		"JavaScript",
+		"LLM",
 		"Java",
 		"Next.js",
 		"MongoDB",
-		"Framer Motion",
 		"Git",
 	];
 
