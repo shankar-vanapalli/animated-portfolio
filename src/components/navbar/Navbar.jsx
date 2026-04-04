@@ -20,21 +20,21 @@ const Navbar = () => {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<img src="/facebook.png" alt="Facebook" />
+						<img src={`${import.meta.env.BASE_URL}facebook.png`} alt="Facebook" />
 					</a>
 					<a
 						href="https://instagram.com"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<img src="/instagram.png" alt="Instagram" />
+						<img src={`${import.meta.env.BASE_URL}instagram.png`} alt="Instagram" />
 					</a>
 					<a
 						href="https://youtube.com"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<img src="/youtube.png" alt="YouTube" />
+						<img src={`${import.meta.env.BASE_URL}youtube.png`} alt="YouTube" />
 					</a>
 				</div>
 			</div>

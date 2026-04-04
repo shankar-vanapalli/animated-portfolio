@@ -63,14 +63,14 @@ const Hero = () => {
 						</motion.a>
 					</motion.div>
 					<motion.img
-						src="/scroll.png"
+						src={`${import.meta.env.BASE_URL}scroll.png`}
 						variants={textVariants}
 						animate="scrollButton"
 						alt="Scroll"
 					/>
 				</motion.div>
 				<div className="imgContainer">
-					<img src="/hero.png" alt="Hero" />
+					<img src={`${import.meta.env.BASE_URL}hero.png`} alt="Hero" />
 				</div>
 			</div>
 		</div>
