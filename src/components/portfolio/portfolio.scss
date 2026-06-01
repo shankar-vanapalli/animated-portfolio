@@ -1,5 +1,6 @@
 .portfolio {
 	position: relative;
+
 	.progress {
 		position: sticky;
 		top: 0;
@@ -19,6 +20,7 @@
 			background-color: white;
 		}
 	}
+
 	.container {
 		display: flex;
 		justify-content: center;
@@ -59,6 +61,7 @@
 					border-radius: 10px;
 				}
 			}
+
 			.textContainer {
 				flex: 1;
 				display: flex;
@@ -77,6 +80,7 @@
 						font-size: 32px;
 					}
 				}
+
 				p {
 					color: gray;
 					font-size: 20px;
@@ -96,6 +100,8 @@
 				}
 			}
 		}
+	}
+
 	.comingSoon {
 		display: flex;
 		flex-direction: column;
@@ -131,6 +137,13 @@
 }
 
 @keyframes pulse {
-	0%, 100% { transform: scale(1); }
-	50% { transform: scale(1.15); }
+
+	0%,
+	100% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.15);
+	}
 }
