@@ -96,5 +96,41 @@
 				}
 			}
 		}
+	.comingSoon {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 20px;
+		min-height: 60vh;
+		text-align: center;
+		padding: 60px 20px;
+
+		.comingSoonIcon {
+			font-size: 80px;
+			animation: pulse 2s ease-in-out infinite;
+		}
+
+		h2 {
+			font-size: 48px;
+			color: orange;
+			letter-spacing: 2px;
+
+			@media (max-width: 768px) {
+				font-size: 28px;
+			}
+		}
+
+		p {
+			font-size: 18px;
+			color: gray;
+			max-width: 500px;
+			line-height: 1.6;
+		}
 	}
+}
+
+@keyframes pulse {
+	0%, 100% { transform: scale(1); }
+	50% { transform: scale(1.15); }
 }
