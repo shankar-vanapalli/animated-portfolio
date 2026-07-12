@@ -3,7 +3,15 @@ import { useRef } from "react";
 import "./portfolio.scss";
 
 // Add your real projects here when ready
-const items = [];
+const items = [
+	{
+		id: 1,
+		title: "Kanya Raasi",
+		desc: "AI Health & Nutrition Coach — A RAG-powered AI chatbot for personalized weight loss, nutrition, and fitness advice. Combines a local vector store (health PDFs) with live web search for grounded, accurate responses. Features streaming token-by-token responses, 30-turn conversation memory, multi-session sidebar, and domain guardrails.",
+		img: "/kanya-raasi.png",
+		link: "https://kanya-raasi.onrender.com",
+	},
+];
 
 const Single = ({ item }) => {
 	const ref = useRef();
